@@ -1,0 +1,136 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App h2{
+  color:red;
+  transition:color 2s;
+}
+
+.App h2:hover{
+  color:yellow;  
+}
+#loading{
+  text-align:center;
+  background-color:gray;
+  width:0%;
+  border:2px solid;
+  transition: width 10s;
+  animation-name:colorchange;
+  animation-duration:10s;
+  
+}
+
+@keyframes colorchange {
+  0%{
+    background-color:gray;
+  }
+  25%{
+    background-color:red;
+  }
+  50%{
+    background-color:green;
+  }
+  75%{
+    background-color:yellow;
+  }
+  100%{
+    background-color:gray;
+  }
+
+}
+
+#loading:hover{
+  width:50%;
+}
+
+#square1 {
+  width: 50px;
+  height:50px;
+  border-radius:50%;
+  background-color:green;
+
+  animation-name:moveing;
+  animation-duration:5s;
+  animation-timing-function:ease;
+  animation-iteration-count:infinite;
+}
+@keyframes moveing{
+  0%{
+    margin-left:0%;
+  }
+  50%{
+    margin-left:100%;
+  }
+  100%{
+    margin-left:0%;
+  }
+}
+
+#spin-outer{
+  width:150px;
+  height:150px;
+  padding:0px;
+  border:solid gold 10px;
+  border-radius:50%;
+  border-top:solid #FF6767 10px;
+  animation-name:spin-o;
+  animation-duration:6s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+#spin-inner{
+  width:120px;
+  height:120px;
+  padding:0px;
+  margin:5px;
+  border:solid gold 10px;
+  border-radius:50%;
+  border-top:solid #FF6767 10px;
+  animation-name:spin-i;
+  animation-duration:6s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+
+@keyframes spin-o{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  }
+
+  @keyframes spin-i{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-720deg);
+    }
+    }
+
+    #pulse1{
+      color:gold;
+        animation-name:pulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes pulse{
+      0%{
+          font-size:100%;
+      }
+      50%{
+          font-size:120%;
+          color:#00CC00;
+      }
+      100%{
+          font-size:100%
+      }
+  }
+}
+
